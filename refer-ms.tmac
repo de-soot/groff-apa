@@ -1,0 +1,99 @@
+.\" refer-ms.tmac
+.\"
+.\" Refer support for ms macros.
+.\"
+.\" Copyright (C) 2011-2020 Free Software Foundation, Inc.
+.\"   Written by Werner Lemberg (wl@gnu.org)
+.\"
+.\" This file is part of groff.
+.\"
+.\" groff is free software; you can redistribute it and/or modify it
+.\" under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation, either version 3 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" groff is distributed in the hope that it will be useful, but WITHOUT
+.\" ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+.\" or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+.\" License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program.  If not, see
+.\" <http://www.gnu.org/licenses/>.
+.\"
+.\" Please send comments to groff@gnu.org.
+.
+.do nr *groff_refer-ms_tmac_C \n[.cp]
+.cp 0
+.
+.als ref*error @error
+.
+.de ref*text-label-start
+.  FS "\\$1"
+..
+.de ref*text-label-end
+.  FE
+..
+.
+.de ref*biblio-item-start
+.  IP "\\$1"
+..
+.de ref*biblio-item-start-nolabel
+.  XP
+..
+.de ref*biblio-item-end
+.  sp
+..
+.
+.als ref*refnum-start fn@mark-start
+.als ref*refnum-end   fn@mark-end
+.
+.ds [. \E*[ref*refnum-start]\"
+.ds .] \E*[ref*refnum-end]\"
+.
+.ds ref*spec!0  Q A D T S V N P I C O
+.ds ref*spec!1  Q A D T J S V N P I C O
+.ds ref*spec!2  Q A D T S V P I C O
+.ds ref*spec!3  Q A D T B E S V P I C O
+.ds ref*spec!4  Q A D T R G P I C O
+.
+.ds ref*spec!A     ",  " "
+.ds ref*spec!B     """ " " "in \fI" "\fP"
+.ds ref*spec!D     """ " " "("      ")"
+.ds ref*spec!E     ",  " " "ed. "   ""
+.ds ref*spec!G     """ " " "("      ")"
+.ds ref*spec!J     ".  " " "\fI"    "\fP"
+.ds ref*spec!N     """ "(" ""       ")"
+.ds ref*spec!O     ".  " "
+.ds ref*spec!P     ",  " " "p.\~"
+.ds ref*spec!PP    ",  " " "pp.\~"
+.ds ref*spec!T     ".  " "
+.ds ref*spec!T:0   ".  " "
+.ds ref*spec!T:2   ".  " "
+.ds ref*spec!V     ",  " " "\fI"    "\fR"
+.ds ref*spec!dflt  ",  " "
+.
+.de ref*biblio-start-hook
+.  nr PS 14
+.  SH
+.  ce
+.  nop \&\\*[REFERENCES]
+.  sp
+.  nr PS 12
+.  par@reset
+..
+.
+.de ref*biblio-end-hook
+.  par@finish
+..
+.
+.mso refer.tmac
+.
+.cp \n[*groff_refer-ms_tmac_C]
+.do rr *groff_refer-ms_tmac_C
+.
+.\" Local Variables:
+.\" mode: nroff
+.\" fill-column: 72
+.\" End:
+.\" vim: set filetype=groff textwidth=72:
