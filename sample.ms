@@ -1,22 +1,18 @@
 .RP no \" Needs Title (.TL); "no" argument prevents it from repeating cover page information on the next page
 
-\" refer block start
-.R1
+.R1 \" Refer block start
 database ref.bib # Path to refer bibliography file from current working directory (can be absolute directory)
 accumulate # Prints References at end of the document (same as `-e` argument for `refer`)
 move-punctuation # Ensures citations appear before punctuations (same as `-P` argument for `refer`)
 sort A+ # Sorts References in alphabetical order
 label "(A1?(A1.n(A3?' et al.':A2&' & 'A2.n)):Q)', '(D.y|D)" # "Author(s), Date" format for parenthetical citation (joins author names using '&' if 2 authors; appends 'et. al.' if 3 or more)
-bracket-label " (" ) "; " # (same as `-S` argument for refer)
-no-label-in-reference # Do not display (Author(s), Date) like footnotes in References.R2
-.R2
-\" refer block end
+bracket-label " (" ) "; " # (same as `-S` argument for `refer`)
+no-label-in-reference # Do not display (Author(s), Date) like footnotes in reference list
+.R2 \" Refer block end
 
 \" Font settings
 .nr PS 12
 .nr VS 24
-
-.P1 \" Unsuppress first page header
 
 .TL \" Empty Title (.TL) stops at Abstract (.AB), does not need .AB if not empty
 .AB no \" "no" argument for no "Abstract" heading
