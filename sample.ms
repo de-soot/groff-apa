@@ -1,5 +1,7 @@
 .RP no \" Needs Title (.TL); "no" argument prevents it from repeating cover page information on the next page
 
+.P1 \" Prevents default first page header suppression
+
 .R1 \" Refer block start
 database ref.bib # Path to refer bibliography file from current working directory (can be absolute directory)
 accumulate # Prints References at end of the document (same as `-e` argument for `refer`)
