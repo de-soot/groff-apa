@@ -3,7 +3,7 @@
 .P1 \" Prevents default first page header suppression
 
 .R1 \" Refer block start
-database ref.bib # Path to refer bibliography file from current working directory (can be absolute directory)
+database ref.bib # Path to refer bibliography file from current working directory (can also be absolute directory)
 accumulate # Prints References at end of the document (same as `-e` argument for `refer`)
 move-punctuation # Ensures citations appear before punctuations (same as `-P` argument for `refer`)
 sort A+ # Sorts References in alphabetical order
