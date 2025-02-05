@@ -1,1 +1,1 @@
-pdfroff -ms -R -dpaper=a4 -P-pa4 sample.ms > sample0.pdf
+pdfroff -ms -R -dpaper=a4 -P-pa4 sample0.ms > sample0.pdf
