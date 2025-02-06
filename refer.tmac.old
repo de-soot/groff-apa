@@ -1,5 +1,3 @@
-.\" -*- mode: nroff; coding: iso-latin-1; -*-
-.\"
 .\" refer.tmac
 .\"
 .\" This is an interface to `refer', originally part of `s.tmac'.
@@ -342,4 +340,8 @@
 ..
 .
 .
-.\" EOF
+.\" Local Variables:
+.\" mode: nroff
+.\" fill-column: 72
+.\" End:
+.\" vim: set filetype=groff textwidth=72:
